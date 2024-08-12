@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Complete</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <!--  <h1>COMPLETE</h1> -->
+        <img src="img/logo1.gif" alt="logo" />
+      </header>
+
+      <div id="userSpace">
+        <section id="createAccount">
+          <h2>Create New User</h2>
+          <form id="createUserForm" action="" method="post">
+            <label
+              ><input
+                type="text"
+                name="User"
+                placeholder="Username"
+                class="username"
+            /></label>
+            <label
+              ><input
+                type="password"
+                name="Pass"
+                id="Pass"
+                placeholder="Password"
+                class="password"
+            /></label>
+            <label
+              ><input
+                type="password"
+                name="CPass"
+                id="CPass"
+                placeholder="Confirm Password"
+                class="cpassword"
+            /></label>
+            <input type="submit" value="Create User" class="button1" />
+          </form>
+          <script src="js/insert_user.js"></script>
+        </section>
+
+        <hr />
+
+        <section id="login">
+          <h2>Log In</h2>
+          <form id="loginForm" action="" method="post">
+            <label
+              ><input
+                type="text"
+                name="User"
+                placeholder="Username"
+                class="username"
+            /></label>
+            <label
+              ><input
+                type="password"
+                name="Pass"
+                placeholder="Password"
+                class="password"
+            /></label>
+            <input type="submit" value="Login" class="button4" />
+          </form>
+          <script src="js/login.js"></script>
+        </section>
+      </div>
+
+      <div id="appSpace">
+        <section id="addProject">
+          <a href="#logout" id="logout">Log out</a>
+          <script src="js/logout.js"></script>
+          <!--<h2>Add Project</h2> -->
+          <button id="addProjectBttn" class="button5">New Project</button>
+          <!--Add Project Form -->
+          <form id="addProjectForm" action="" method="post">
+            <label
+              ><input
+                type="text"
+                name="Title"
+                placeholder="Title"
+                class="title"
+            /></label>
+            <label>
+              <textarea name="Description" placeholder="Description"></textarea>
+            </label>
+            <input type="submit" value="Add Project" class="button3" />
+          </form>
+          <script src="js/insert_project.js"></script>
+        </section>
+
+        <hr />
+
+        <section id="projectList">
+          <h3>Active Projects</h3>
+          <ul id="projectsNav"></ul>
+          <script src="js/select_tasks.js"></script>
+          <script src="js/update_task.js"></script>
+          <script src="js/select_project_details.js"></script>
+          <script src="js/select_projects.js"></script>
+        </section>
+
+        <hr />
+
+        <section id="projectDetails">
+          <h2 id="projectTitle"><!--Project Title--></h2>
+          <p id="projectDescription"></p>
+          <!--Labels-->
+          <p class="tcreated"></p>
+          <p class="description"></p>
+
+          <!--Control Buttons-->
+          <div class="tasksbuttons">
+            <button id="archiveBttn" class="button4">Archive</button>
+            <script src="js/update_project.js"></script>
+            <button id="addTaskBttn" class="button2">New Task</button>
+          </div>
+          <!--Add Task Form-->
+          <form id="addTaskForm" action="" method="post">
+            <label
+              ><input
+                type="text"
+                name="Description"
+                placeholder="Task"
+                class="description2"
+            /></label>
+            <label><input type="date" name="Deadline" /></label>
+            <input type="submit" value="Add Task" class="button3" />
+          </form>
+          <script src="js/insert_task.js"></script>
+
+          <!--Tasks List-->
+          <!-- <div class="taskscomplete"> -->
+          <h2>Tasks</h2>
+          <ul id="tasksList"></ul>
+        </section>
+      </div>
+    </div>
+    <!--wrapper-->
+    <script>
+      let resetUI = function () {
+        if (window.localStorage.getItem("PMUser")) {
+          document.getElementById("userSpace").classList.add("hide");
+          document.getElementById("appSpace").classList.remove("hide");
+
+          select_projects();
+
+          if (window.localStorage.getItem("PMProj")) {
+            document.getElementById("projectDetails").classList.remove("hide");
+            select_project_details(window.localStorage.getItem("PMProj"));
+          } else {
+            document.getElementById("projectDetails").classList.add("hide");
+          }
+        } else {
+          document.getElementById("userSpace").classList.remove("hide");
+          document.getElementById("appSpace").classList.add("hide");
+        }
+
+        ///Hide forms
+        document.getElementById("addProjectForm").classList.add("hide");
+        document.getElementById("addTaskForm").classList.add("hide");
+      };
+      resetUI();
+
+      //Control Buttons
+      //This needs to run only once, so it is outside of the restUI() function
+      document
+        .getElementById("addProjectBttn")
+        .addEventListener("click", function () {
+          document.getElementById("addProjectForm").classList.toggle("hide");
+        });
+      document
+        .getElementById("addTaskBttn")
+        .addEventListener("click", function () {
+          document.getElementById("addTaskForm").classList.toggle("hide");
+        });
+
+      //Confirm Pass
+      document.getElementById("CPass").addEventListener("input", function () {
+        if (
+          document.getElementById("CPass").value !=
+          document.getElementById("Pass").value
+        ) {
+          document.getElementById("CPass").className = "error";
+        } else {
+          document.getElementById("CPass").className = "good";
+        }
+      });
+    </script>
+  </body>
+</html>

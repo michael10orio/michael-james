@@ -1,0 +1,491 @@
+html {
+  font-size: 10px;
+  font-family: "Archivo", sans-serif;
+  color: #274156;
+  background-color: #d0ccd0;
+}
+
+body {
+  max-width: 400px;
+  background-color: #fbfcff;
+  margin: 0rem auto;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+#wrapper {
+  margin: 10px;
+  padding: 15px;
+}
+
+/* Provided Code */
+
+.hide {
+  /* KEEP THIS CLASS */
+  display: none !important;
+}
+.current {
+  /* Make this do what you want */
+  color: #1c6e8c;
+}
+.error {
+  outline-color: #605856;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  color: #274156;
+  text-shadow: 0 3px #d0ccd0;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: left;
+  color: #274156;
+}
+h3 {
+  font-size: 2rem;
+  text-align: left;
+  color: #1c6e8c;
+}
+#projectTitle {
+  font-size: 3.5rem;
+  text-align: left;
+  color: #1c6e8c;
+}
+p,
+#projectDescription {
+  font-family: "Archivo", sans-serif;
+  font-style: normal;
+  color: #1c6e8c;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+#projectDescription {
+  margin-top: -10px;
+}
+#logout {
+  width: 50%;
+  margin-left: 130px;
+}
+
+/* Logo */
+
+img {
+  align-content: center;
+  margin-left: 100px;
+  margin-bottom: 15px;
+}
+
+/* List */
+
+li {
+  color: #fbfcff;
+  padding: 10px;
+  font-family: "Archivo", sans-serif;
+  color: #274156;
+  font-size: 3rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  grid-template-columns: 1fr 1fr;
+  margin: 15px;
+}
+
+li:hover {
+  color: #1c6e8c;
+  text-decoration: underline;
+}
+
+li:active {
+  color: #1c6e8c;
+  text-decoration: underline;
+  text-shadow: 0 3px #d0ccd0;
+}
+li:focus {
+  color: #605856;
+  text-decoration: underline;
+  text-shadow: 0 3px #d0ccd0;
+}
+
+/* Forms */
+
+form {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+label {
+  cursor: text;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.5rem;
+  margin-left: 0px;
+}
+
+.username,
+.password,
+#CPass,
+.description2 {
+  width: 90%;
+  border: 0;
+  outline: 0;
+  padding: 1rem 0;
+  border-bottom: 2px solid;
+  box-shadow: none;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1c6e8c;
+  background-color: transparent;
+  transition: width 0.5s;
+  transition-timing-function: ease-in;
+  border-color: #274156;
+}
+
+/* Hover,Active,Focus */
+
+.username:hover,
+.password:hover,
+.cpassword:hover,
+#CPass:hover,
+.description2:hover {
+  border-color: #1c6e8c;
+  outline-color: #1c6e8c;
+  background-color: #d0ccd0;
+}
+.username:active,
+.password:active,
+#CPass:active,
+.description2:active {
+  width: 95%;
+  border-color: #274156;
+  outline-color: #274156;
+  box-shadow: 0 3px 3px #d0ccd0;
+}
+.username:focus,
+.password:focus,
+#CPass:focus,
+.description2:focus {
+  width: 95%;
+  border-color: #1c6e8c;
+  outline-color: #1c6e8c;
+}
+.username:invalid,
+.password:invalid,
+.description2:invalid {
+  width: 95%;
+  border-color: #605856;
+  outline-color: #605856;
+}
+
+/* CPass */
+
+#CPass:invalid {
+  width: 95%;
+  border-color: #605856;
+  outline-color: #605856;
+}
+
+/* Date */
+
+input[type="date"]:hover {
+  border-color: #1c6e8c;
+  outline-color: #1c6e8c;
+  background-color: #d0ccd0;
+}
+
+input[type="date"]:active {
+  width: 85%;
+  border-color: #274156;
+  outline-color: #274156;
+  box-shadow: 0 3px 3px #d0ccd0;
+}
+
+input[type="date"]:focus {
+  width: 85%;
+  border-color: #1c6e8c;
+  outline-color: #1c6e8c;
+}
+input[type="date"] {
+  width: 60%;
+  border: 0;
+  outline: 0;
+  padding: 1rem 0;
+  border-bottom: 2px solid;
+  box-shadow: none;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1c6e8c;
+  background-color: transparent;
+  transition: width 0.5s;
+  transition-timing-function: ease-in;
+  border-color: #274156;
+}
+
+/* Title,Textarea */
+
+.title:hover,
+textarea:hover {
+  border-color: #1c6e8c;
+  outline-color: #1c6e8c;
+  background-color: #d0ccd0;
+}
+.title:active,
+textarea:active {
+  width: 95%;
+  border-color: #274156;
+  outline-color: #1c6e8c;
+  outline-color: #274156;
+}
+
+.title:focus,
+textarea:focus {
+  width: 95%;
+  border-color: #1c6e8c;
+  outline-color: #1c6e8c;
+  background-color: transparent;
+}
+
+textarea {
+  font-size: 2.3rem;
+  width: 90%;
+  font-family: "Archivo", sans-serif;
+  resize: none;
+  height: 120px;
+  font-size: 2rem;
+  color: #1c6e8c;
+  border-color: #274156;
+  box-shadow: 0 3px 3px #d0ccd0;
+  transition: width 0.5s;
+  transition-timing-function: ease-in;
+  border-radius: 5px;
+}
+.title {
+  font-size: 2.3rem;
+  width: 90%;
+  height: 2rem;
+  font-family: "Archivo", sans-serif;
+  resize: none;
+  height: 35px;
+  font-size: 2rem;
+  color: #1c6e8c;
+  border-color: #274156;
+  box-shadow: 0 3px 3px #d0ccd0;
+  transition: width 0.5s;
+  transition-timing-function: ease-in;
+  margin-bottom: 12px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+/* Buttons */
+
+.button1,
+.button2,
+.button3,
+.button4,
+.button5,
+#tasksList button {
+  width: 50%;
+  font-family: "Archivo", sans-serif;
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 8px 6px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 3px #d0ccd0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.button1:focus,
+.button2:focus,
+.button3:focus,
+.button4:focus,
+.button5:focus,
+#tasksList button:focus,
+#logout:focus {
+  background-color: #d0ccd0;
+}
+.button1:active,
+.button2:active,
+.button3:active,
+.button4:active,
+.button5:active,
+#tasksList button:active,
+#logout:active {
+  box-shadow: 0 5px #d0ccd0;
+  transform: translateY(4px);
+}
+.button1,
+#logout {
+  background-color: #fbfcff;
+  color: #274156;
+  border: 2px solid #1e2124;
+}
+.button1:hover,
+#logout:hover {
+  background-color: #274156;
+  color: #fbfcff;
+}
+
+.button2,
+.button5 {
+  background-color: #fbfcff;
+  color: #1c6e8c;
+  border: 2px solid #1c6e8c;
+}
+
+.button2:hover,
+.button5:hover {
+  background-color: #1c6e8c;
+  color: #fbfcff;
+}
+
+.button3 {
+  background-color: #1c6e8c;
+  color: #fbfcff;
+  border: 2px solid #1c6e8c;
+}
+
+.button3:hover {
+  background-color: #fbfcff;
+  color: #1c6e8c;
+}
+#tasksList button,
+.button4 {
+  background-color: #274156;
+  color: #fbfcff;
+  border: 2px solid #274156;
+}
+
+#tasksList button:hover,
+.button4:hover {
+  background-color: #fbfcff;
+  color: #274156;
+}
+#logout {
+  width: 40%;
+  font-family: "Archivo", sans-serif;
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 8px 6px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 3px #d0ccd0;
+  border-radius: 10px;
+  transition: 0.1em;
+}
+hr {
+  margin-top: 15px;
+  color: #274156;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1000px;
+  }
+  img {
+    margin-left: 380px;
+    margin-bottom: 30px;
+  }
+  hr {
+    margin-right: 30px;
+    color: #274156;
+  }
+  #wrapper {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin: auto;
+    padding: 15px;
+  }
+
+  #userSpace {
+    display: flex;
+  }
+  #createAccount {
+    width: 60%;
+  }
+  #login {
+    width: 60%;
+  }
+
+  /* #appSpace
+   #addProject
+  #projectList
+  #projectDetails
+  #projectTitle,
+  #projectDescription
+   #addProject {
+    display: flex;
+    width: 80%;
+    padding: 0px 50px;
+  }
+  #projectDetails {
+    display: flex;
+    width: 100%;
+    padding: 0px 100px;
+  }
+*/
+  #appSpace {
+    display: flex;
+    padding-bottom: 20px;
+  }
+  #addProject {
+    width: 60%;
+  }
+  #projectList {
+    width: 50%;
+  }
+  #projectDetails {
+    width: 60%;
+  }
+  input[type="date"]:active {
+    width: 65%;
+  }
+  input[type="date"]:focus {
+    width: 65%;
+  }
+  input[type="date"] {
+    width: 60%;
+    margin-right: 90px;
+  }
+  .button1,
+  .button2,
+  .button3,
+  .button4,
+  #tasksList button {
+    width: 50%;
+    height: 15%;
+    padding: 10px 12px;
+    margin: 8px 6px;
+  }
+  .button5 {
+    width: 48%;
+  }
+  .tasksbuttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #logout {
+    width: 43%;
+    padding: 10px 10px;
+    margin: 8px 6px;
+  }
+}
