@@ -1,0 +1,379 @@
+/* Body, HTML */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    color: #2d5f8c;
+    font-size: 16pt;
+    margin: auto 0%;
+    background: url('../img/patterns.png');
+    background-size: 50%;
+    cursor: url('../img/cursor1.png'), auto;
+}
+
+/* animation: mymove 5s infinite;
+    }
+    
+    @keyframes mymove {
+        from {
+            background-color: dodgerblue;
+        }
+    
+        to {
+            background-color: yellow;
+        } */
+
+main {
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    display: block;
+    background-color: white;
+
+}
+
+/* Header, Nav, Footer */
+
+header {
+    width: 100vw;
+    height: 5vw;
+    background-color: #2d5f8c;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, auto);
+    padding: 2em;
+    z-index: 200;
+}
+
+header nav {
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, auto));
+    grid-gap: 0.2em;
+}
+
+nav a {
+    text-align: center;
+    line-height: .3em;
+    /* set to same as h1 in header */
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+
+/* Font */
+
+
+/* h1 {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25pt;
+    line-height: 2;
+    color: #2d5f8c;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+h2 {
+    font-size: 20pt;
+    line-height: 2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: #2d5f8c;
+
+}
+
+h3 {
+color: black;
+    font-size: 18pt;
+    margin-top: 40px;
+    line-height: 2.5;
+    text-align: center;
+        font-weight: lighter;
+} */
+
+
+h1 {
+    font-size: 25pt;
+    line-height: 2.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: #2d5f8c;
+    cursor: pointer;
+}
+
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30pt;
+    line-height: 1.5;
+    color: #2d5f8c;
+    text-align: center;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18pt;
+    line-height: 2.5;
+    color: black;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 25pt;
+    line-height: 2.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    color: #2d5f8c;
+}
+
+p {
+    font-size: 16pt;
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+p.foot {
+    color: white;
+    /* width: 450px; */
+    text-align: center;
+    margin: auto;
+}
+
+/* Image  */
+
+img.pic {
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.about {
+    display: grid;
+}
+
+a:hover {
+    color: #fc6471;
+    cursor: url('../img/cursor2.png'), auto;
+}
+
+footer {
+    background-color: #2d5f8c;
+    padding: 1.2em;
+
+}
+
+.fa {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 90px;
+    color: white;
+    /* display: block; */
+}
+
+.fa:hover {
+    color: #fc6471;
+    cursor: url('../img/cursor2.png'), auto;
+}
+
+.icons {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.email {
+    color: white;
+}
+
+/* Layout */
+
+.category {
+    margin-top: -30px;
+}
+
+li {
+    padding: 5px 5px;
+    /* padding-block: -20px; */
+}
+
+ul {
+    padding-left: 25px;
+}
+
+article {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+img.logo {
+    margin-top: -25px;
+    width: 100px;
+    height: auto;
+}
+
+section.gallery {
+    display: grid;
+    grid-gap: 20px;
+    padding-top: 30px;
+}
+
+img.pic1 {
+    height: 100%;
+    width: 100%;
+
+}
+
+.text {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 550px) {
+    img.logo {
+        margin-top: -30px;
+        width: 100px;
+        height: auto;
+    }
+}
+
+/* @media screen and (min-width:830px) {
+
+    .about {
+        grid-gap: 20px;
+        }
+} */
+@media screen and (min-width: 768px) {
+    body {
+        background-size: 25%;
+    }
+
+    main {
+        max-width: 1200px;
+        padding: 30px;
+        padding-top: 130px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        line-height: 1.5;
+    }
+
+    img.pic1 {
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        display: block;
+    }
+
+    img.pic {
+        height: 100%;
+        width: 100%;
+    }
+
+    img.logo {
+        width: 120px;
+        height: auto;
+    }
+
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+
+    .text {
+        max-width: 650px;
+        margin-top: 40px;
+        margin: auto;
+        display: block;
+    }
+
+    ul.list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    section.gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        grid-gap: 30px;
+    }
+
+}
+
+@media screen and (max-width: 890px) {
+    main {
+        max-width: 600px;
+        padding: 30px;
+        padding-top: 130px;
+        padding-bottom: 20px;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (min-width: 1900px) {
+
+    main {
+        max-width: 1500px;
+        padding: 50px;
+        padding-top: 130px;
+        padding-bottom: 50px;
+
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    main {
+        max-width: 450px;
+
+    }
+}
