@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Awareness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="https://michael80.micromediaweb.com/portfolio/work/index.html" target="_blank">Work</a>
+            <a href="https://michael80.micromediaweb.com/portfolio/index.html" target="_blank"><img src="img/logo.png"
+                    class="logo" alt="" /></a>
+            <a href="https://michael80.micromediaweb.com/portfolio/about/index.html" target="_blank">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <img src="img/Mockup-Postcard.jpg" class="pic1" alt="" /></img>
+
+        <article id="about">
+            <h4>April - May 2022</h4>
+            <br>
+            <h2>Animal Awareness</h2>
+            <p>The “ANIMALS ARE NOT TOYS” is to raise awareness of animal cruelty for SPCA advertising.The design is the
+                head of an
+                animal on a stuffed body of a stuffed toy with an effective slogan and concerning facts about animal
+                abuse.These mockups
+                use many using layers of masks, blending modes, and adjustment layers in Adobe Photoshop. It is
+                uniformed to promote a
+                serious message and an eye-catching image to the appropriate market.
+            </p>
+        </article>
+
+        <article>
+            <button class="button"> <a class="action" href="img/Final_Presentation.pdf" target="_blank">Campaign
+                    PDF</a></button>
+        </article>
+
+
+
+        <article class="gallery">
+
+            <figure>
+                <img src="img/Mockup-Billboard.jpg" alt="" class="pic" id="myPhoto">
+            </figure>
+
+            <div id="myPreview" class="mode">
+                <span class="close">&times;</span>
+                <img class="mode-content" id="photo">
+                <div id="caption"></div>
+            </div>
+
+                <figure>
+                    <img src="img/Mockup-Shirt.jpg" alt="" class="pic" id="myPhoto">
+                </figure>
+                
+                <div id="myPreview" class="mode">
+                    <span class="close">&times;</span>
+                    <img class="mode-content" id="photo">
+                    <div id="caption"></div>
+                </div>
+
+                    <figure>
+                        <img src="img/Mockup-Magazine_Ad.jpg" alt="" class="pic" id="myPhoto">
+                    </figure>
+                    
+                    <div id="myPreview" class="mode">
+                        <span class="close">&times;</span>
+                        <img class="mode-content" id="photo">
+                        <div id="caption"></div>
+                    </div>
+
+    
+
+        </article>
+
+
+        <article class="category">
+
+            <ul class="list">
+                <li>
+                    <h5>Type of Project</h5>
+                    <p>SPCA Campaign</p>
+                </li>
+
+                <li>
+                    <h5>Applications</h5>
+                    <p>Adobe Photoshop</p>
+                    <p>Adobe InDesign</p>
+                </li>
+                <li>
+                    <h5>Challenges</h5>
+                    <p>I edited the image of the face of a real animal to the body of a stuffed toy. I also struggled to
+                        Photoshop blend mode
+                        the face and bodies of the animals. I had a hard time finding the perfect photos.
+                    </p>
+                </li>
+
+                <li>
+                    <h5>Solutions</h5>
+                    <p>I constantly ask for feedback and try different photoshop techniques to match the images. I also
+                        tried using different
+                        pictures to fit with the composites which took a lot of time.
+                    </p>
+                </li>
+            </ul>
+        </article>
+
+    </main>
+    <footer>
+        <article class="icons">
+            <a href="https://www.linkedin.com/in/michael-james-tenorio-963b661a9/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/channel/UCQOO25eaOVz7zXkxNIqRhJw" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/michael10orio/" class="fa fa-instagram"></a>
+        </article>
+        <p class="foot">© Copyright 2022 by MYCOOL. All rights reversed. Contact me: <a class="email"
+                href="mailto:michaeljamestenorio@gmail.com?Subject=Contact%20from%20Michael%20site&Body=Greetings!%20:)">michaeljamestenorio@gmail.com</a>
+        </p>
+    </footer>
+
+    <script>
+        // Get the mode
+        var mode = document.getElementById("myPreview");
+
+        // Get the image and insert it inside the mode - use its "alt" text as a caption
+        var img = document.getElementById("myPhoto");
+        var modeImg = document.getElementById("photo");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            mode.style.display = "block";
+            modeImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the mode
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the mode
+        span.onclick = function () {
+            mode.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
