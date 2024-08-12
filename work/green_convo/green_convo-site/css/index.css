@@ -1,0 +1,120 @@
+/* Styles: Login & Signup */
+
+html {
+  margin: 2rem auto;
+  font-size: 10px;
+  background-color: rgb(209, 236, 209);
+}
+body {
+  max-width: 400px;
+  align-items: center;
+  text-align: center;
+  margin: 0.3rem auto;
+}
+
+#wrapper {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/* Typography */
+
+h1 {
+  font-family: "Lilita One", cursive;
+  color: lightgreen;
+  text-shadow: 2px 2px 5px black;
+  font-size: 3rem;
+  text-align: left;
+  transition: transform 0.7s;
+  cursor: pointer;
+}
+h1:hover {
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+hr {
+  width: 80%;
+  margin-top: 23px;
+  background-color: lightgray;
+}
+p {
+  display: hide;
+}
+
+/* Buttons */
+
+#button {
+  background-color: lightgreen;
+  box-shadow: 1px 1px 2px black;
+  width: 70%;
+  display: center;
+  font-family: "Lilita One", cursive;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px 2px;
+  border: none;
+}
+#button:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+label {
+  font-size: 2rem;
+  font-family: "Lilita One", cursive;
+  color: black;
+  text-align: center;
+}
+input {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 800px;
+    margin: 4rem auto;
+  }
+  h1 {
+    font-size: 12rem;
+  }
+  header {
+    float: left;
+    margin-bottom: -800px;
+    padding-right: 500px;
+  }
+  #wrapper {
+    max-width: 400px;
+    float: right;
+  }
+}
+
+@media screen and (max-height: 368px) {
+  body {
+    max-height: 300px;
+    margin: 0rem auto;
+  }
+  #wrapper {
+    cursor: pointer;
+    overflow-y: auto;
+    max-height: 170px;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+@media screen and (max-height: 368px) and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+  #wrapper {
+    max-height: 250px;
+  }
+}

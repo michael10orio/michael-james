@@ -1,0 +1,93 @@
+/* Styles: List */
+
+html {
+  font-size: 10px;
+  background-color: rgb(209, 236, 209);
+}
+body {
+  max-width: 400px;
+  margin: 0.3rem auto;
+}
+#wrapper {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 550px;
+  margin: auto;
+}
+
+/* Typography */
+
+h1 {
+  font-family: "Lilita One", cursive;
+  color: lightgreen;
+  text-shadow: 2px 2px 5px black;
+  font-size: 3rem;
+  text-align: left;
+}
+/* #listContainer {
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 550px;
+  margin: auto; 
+}*/
+#listContainer div {
+  background-color: white;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+#listContainer div:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+  transition: 1s;
+  color: lightgray;
+}
+#listContainer p.alias {
+  color: black;
+  font-size: 3.5rem;
+  font-family: "Lilita One", cursive;
+  text-align: left;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+#listContainer p.date {
+  color: lightgrey;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: right;
+}
+
+/* Buttons */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+button {
+  background-color: lightgreen;
+  box-shadow: 1px 1px 2px black;
+  padding: 10px 30px;
+  display: inline-flex;
+  font-family: "Lilita One", cursive;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 4px 2px;
+  border: none;
+}
+button:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 800px;
+  }
+}
+@media screen and (max-height: 368px) {
+  #wrapper {
+    max-height: 120px;
+  }
+}

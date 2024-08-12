@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Green Convo</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/list.css" />
+  </head>
+
+  <body>
+    <button>
+      <a href="#logout" id="logout">Log out</a>
+    </button>
+    <script src="js/logout.js"></script>
+    <script src="js/get_alias.js"></script>
+    <h1><span id="user_current_span"></span> has a convo with:</h1>
+    <script>
+      get_alias(
+        window.localStorage.getItem("user_current"),
+        "user_current_span"
+      );
+    </script>
+    <div id="wrapper">
+      <section id="listContainer"></section>
+      <script src="js/select_users.js"></script>
+    </div>
+
+    <!--wrapper-->
+  </body>
+</html>

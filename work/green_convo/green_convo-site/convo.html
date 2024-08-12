@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Green Convo</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/convo.css" />
+  </head>
+
+  <body>
+    <button>
+      <a href="#logout" id="logout">Log out</a>
+    </button>
+    <script src="js/logout.js"></script>
+    <button>
+      <a href="list.html">Back</a>
+    </button>
+
+    <script src="js/get_alias.js"></script>
+    <h1><span id="user_partner_span"></span></h1>
+    <script>
+      get_alias(
+        window.localStorage.getItem("user_partner"),
+        "user_partner_span"
+      );
+    </script>
+
+    <div id="wrapper">
+      <section id="messagesContainer"></section>
+      <script src="js/select_messages.js"></script>
+
+      <section id="newMessage">
+        <form id="messageForm" action="" method="post">
+          <textarea name="Convo" id="space" placeholder="Aa"></textarea>
+          <input type="submit" value=">" id="send" />
+        </form>
+        <script src="js/insert_message.js"></script>
+      </section>
+    </div>
+    <!--wrapper-->
+  </body>
+</html>

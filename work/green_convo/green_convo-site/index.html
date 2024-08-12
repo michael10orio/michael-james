@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Green Convo</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Green Convo</h1>
+    </header>
+
+    <div id="wrapper">
+      <h2>Enter an Account</h2>
+      <section id="login">
+        <form id="loginForm" action="" method="post">
+          <label
+            ><input type="text" name="Name" id="login" placeholder="Name"
+          /></label>
+          <label
+            ><input
+              type="password"
+              name="Password"
+              id="login"
+              placeholder="Password"
+          /></label>
+          <input type="submit" value="Log in" id="button" />
+        </form>
+        <script src="js/login.js"></script>
+      </section>
+      <hr />
+      <h2>Create a New Account</h2>
+      <section id="signup">
+        <form id="signupForm" action="" method="post">
+          <label
+            ><input type="text" name="Name" id="signup" placeholder="Name"
+          /></label>
+          <label
+            ><input type="text" name="Alias" id="signup" placeholder="Alias"
+          /></label>
+          <label
+            ><input
+              type="password"
+              name="Password"
+              id="signup"
+              placeholder="Password"
+          /></label>
+          <input type="submit" value="Sign up" id="button" />
+        </form>
+        <script src="js/insert_user.js"></script>
+      </section>
+    </div>
+    <!--wrapper-->
+  </body>
+</html>
